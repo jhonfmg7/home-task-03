@@ -1,6 +1,9 @@
 import React from 'react';
 import styles from '../../../css-modules/main.module.css';
 
+// Prop Types
+import PropTypes from 'prop-types';
+
 const NavBar = ({ children, typeSelected, setTypeSelected, sortBySelected, setSortBySelected }) => {
 
     const changeItemSelected = (type) => {
@@ -36,4 +39,12 @@ const NavBar = ({ children, typeSelected, setTypeSelected, sortBySelected, setSo
     )
 }
 
-export default NavBar
+NavBar.propTypes = {
+    children: PropTypes.element.isRequired,
+    typeSelected: PropTypes.string.isRequired, 
+    setTypeSelected: PropTypes.func.isRequired, 
+    sortBySelected: PropTypes.string.isRequired, 
+    setSortBySelected: PropTypes.func.isRequired, 
+}
+
+export default NavBar;

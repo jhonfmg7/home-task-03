@@ -1,6 +1,9 @@
 import React from 'react';
 import styles from '../../css-modules/main.module.css';
 
+// Prop Types
+import PropTypes from 'prop-types';
+
 const CardMovie = ({ movie }) => {
     return (
         <article className={ styles.movieItem }>
@@ -24,6 +27,10 @@ const CardMovie = ({ movie }) => {
             </p>
         </article>
     )
+}
+
+CardMovie.propTypes = {
+    movie: PropTypes.object.isRequired
 }
 
 export default CardMovie
