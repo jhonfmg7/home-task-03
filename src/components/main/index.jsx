@@ -10,12 +10,12 @@ import NavBar from './navbar';
 import ListMovies from './ListMovies';
 
 const movies = [
-    { id: 1, title: "Pulp Fiction", releaseDate: "2004", genres: [ "Action", "Adventure" ], image: "/img/pulpFiction.png", rating: 7.8, movieUrl: "", runtime: 0, overview: "" },
-    { id: 2, title: "Bohemian Rhapsody", releaseDate: "2003", genres: [ "Drama", "Biography", "Music" ], image: "/img/bohemianRhapsody.png", rating: 8, movieUrl: "", runtime: 10, overview: "" },
-    { id: 3, title: "Kill Bill: Vol 2", releaseDate: "1994", genres: [ "Oscar Winning Movie" ], image: "/img/killBill.png", rating: 9, movieUrl: "", runtime: 50, overview: "" },
-    { id: 4, title: "Avengers: Infinity War", releaseDate: "2018", genres: [ "Action", "Adventure" ], image: "/img/avengers.png", rating: 7, movieUrl: "", runtime: 180, overview: "" },
-    { id: 5, title: "Inception", releaseDate: "2010", genres: [ "Action", "Adventure" ], image: "/img/inception.png", rating: 6, movieUrl: "", runtime: 100, overview: "" },
-    { id: 6, title: "Reservoir Dogs", releaseDate: "1997", genres: [ "Oscar Winning Movie" ], image: "/img/reservoirDogs.png", rating: 5, movieUrl: "", runtime: 120, overview: "" },
+    { id: 1, title: "Pulp Fiction", releaseDate: "2004/01/01", genres: [ "Action", "Adventure" ], image: "/img/pulpFiction.png", rating: 7.8, movieUrl: "", runtime: 0, overview: "" },
+    { id: 2, title: "Bohemian Rhapsody", releaseDate: "2003/01/01", genres: [ "Drama", "Biography", "Music" ], image: "/img/bohemianRhapsody.png", rating: 8, movieUrl: "", runtime: 10, overview: "" },
+    { id: 3, title: "Kill Bill: Vol 2", releaseDate: "1994/01/01", genres: [ "Oscar Winning Movie" ], image: "/img/killBill.png", rating: 9, movieUrl: "", runtime: 50, overview: "" },
+    { id: 4, title: "Avengers: Infinity War", releaseDate: "2018/01/01", genres: [ "Action", "Adventure" ], image: "/img/avengers.png", rating: 7, movieUrl: "", runtime: 180, overview: "" },
+    { id: 5, title: "Inception", releaseDate: "2010/01/01", genres: [ "Action", "Adventure" ], image: "/img/inception.png", rating: 6, movieUrl: "", runtime: 100, overview: "" },
+    { id: 6, title: "Reservoir Dogs", releaseDate: "1997/01/01", genres: [ "Oscar Winning Movie" ], image: "/img/reservoirDogs.png", rating: 5, movieUrl: "", runtime: 120, overview: "" },
 ]
 
 const Main = () => {
@@ -41,9 +41,8 @@ const Main = () => {
                 setTypeSelected={ setTypeSelected } 
                 sortBySelected={ sortBySelected } 
                 setSortBySelected={ setSortBySelected }
-            >
-                <ListMovies moviesSelected={ moviesSelected } />
-            </NavBar>
+            ></NavBar>
+            <ListMovies moviesSelected={ moviesSelected } />
         </main>
     )
 }
