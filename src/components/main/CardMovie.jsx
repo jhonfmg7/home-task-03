@@ -4,12 +4,14 @@ import styles from '../../css-modules/main.module.css';
 // Prop Types
 import PropTypes from 'prop-types';
 
+const PUBLIC_URL = process.env.PUBLIC_URL;
+
 const CardMovie = ({ movie }) => {
     return (
         <article className={ styles.movieItem }>
-            <img src={ process.env.PUBLIC_URL + movie.image } alt={ movie.title + '.png' } />
+            <img src={ `${ PUBLIC_URL }${ movie.image }` } alt={ `${ movie.title }.png` } />
             <div className={ styles.titleContainer }>
-                <p style={{ marginBottom: 0 }}>{ movie.title }</p>
+                <p className={ styles.movieTitle }>{ movie.title }</p>
                 <p className={ styles.movieDate }>{ movie.releaseDate }</p>
             </div>
             <p className={ styles.genres }>
