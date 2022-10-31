@@ -16,8 +16,8 @@ const NavBar = ({ typeSelected, setTypeSelected, sortBySelected, setSortBySelect
     return (
         <nav className={ styles.navbar }>
             <ul className={ styles.navbarItems }>
-                { CATEGORIES.map( category => (
-                    <li className={ typeSelected === category ? styles.navbarItemActive : styles.navbarItem } onClick={ () => changeItemSelected(category) }>{ camelCase(category) }</li>
+                { CATEGORIES.map( (category, index) => (
+                    <li key={ index } className={ typeSelected === category ? styles.navbarItemActive : styles.navbarItem } onClick={ () => changeItemSelected(category) }>{ camelCase(category) }</li>
                 ) ) }
             </ul>
             <div className={ styles.sortBySelect }>
